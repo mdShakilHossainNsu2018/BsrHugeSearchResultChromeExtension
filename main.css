@@ -1,0 +1,63 @@
+
+.navbar{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    margin-bottom: .5rem;
+    background-color: #343a40;
+}
+
+table {
+    background-color: white;
+    color: black;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.close-btn{
+    margin-left: auto;
+    border-radius: 50%;
+    font-weight: bold;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    text-align: center;
+}
+
+#overlay {
+    display: none; /* Hidden by default */
+    width: 800px; /* Full width (cover the whole page) */
+    height: 500px; /* Full height (cover the whole page) */
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    color: white; background: #666666; opacity: .9;
+    z-index: 1000;; /* Black background with opacity */
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}

@@ -4,7 +4,8 @@
   "description": "Amazon & KDP niche research & analysis tool for better listings & ads",
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "browser_action": {
     "default_title": "KDP / Amazon BSR & Keyword Research SEO Tool",
@@ -40,6 +41,7 @@
         "js/content.js",
         "js/xlsx.full.min.js"
       ],
+      "css": ["main.css"],
       "run_at": "document_end"
     }
   ],
@@ -56,6 +58,7 @@
     "images/bullhorn-solid.png",
     "images/home-solid.png",
     "images/publishing.png",
-    "images/logo2.png"
+    "images/logo2.png",
+    "main.css"
   ]
 }

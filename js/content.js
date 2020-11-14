@@ -141,7 +141,7 @@ function calculateScore(totalResult, avgBSR, avgReviews, avgPrice) {
  * Create and download excel file
  * @param {*} productDetails
  */
-function createExcelFile(productDetails) {
+function createExcelFileBSR(productDetails) {
     // // Create csv data
     // var data = [["ASIN / ISBN", "Authors", "Title"]];
     // Object.keys(productDetails).map(function (key) {
@@ -536,7 +536,7 @@ function renderTable(productDetails = []) {
     })
 
     $("#download_excel_file_" + chrome.runtime.id).click(function () {
-        createExcelFile(productDetails);
+        createExcelFileBSR(productDetails);
     });
 }
 
@@ -1280,35 +1280,34 @@ if (Object.keys(validDomains).includes(hostname)) {
     }, 1000);
 }
 
-chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-    chrome.storage.local.set({
-        [uniqueId + "_isEnable"]: msg.isEnable
-    }, function () {
-        if (chrome.runtime.lastError) {
-            console.log("Error Storing 2: ", chrome.runtime.lastError.message);
-        }
-
-        location.reload();
-    });
-});
-
+// chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
+//     chrome.storage.local.set({
+//         [uniqueId + "_isEnable"]: msg.isEnable
+//     }, function () {
+//         if (chrome.runtime.lastError) {
+//             console.log("Error Storing 2: ", chrome.runtime.lastError.message);
+//         }
+//
+//         location.reload();
+//     });
+// });
 
 
 // Kdp Huge search results
 
-var hostname = window.location.hostname;
-var uniqueId = "amazon-search-" + chrome.runtime.id;
-
-var validDomains = {
-    "www.amazon.com": "english",
-    "www.amazon.co.uk": "english",
-    "www.amazon.com.au": "english",
-    "www.amazon.ca": "canadian",
-    "www.amazon.es": "estonia",
-    "www.amazon.it": "italian",
-    "www.amazon.de": "germani",
-    "www.amazon.fr": "french"
-};
+// var hostname = window.location.hostname;
+// var uniqueId = "amazon-search-" + chrome.runtime.id;
+//
+// var validDomains = {
+//     "www.amazon.com": "english",
+//     "www.amazon.co.uk": "english",
+//     "www.amazon.com.au": "english",
+//     "www.amazon.ca": "canadian",
+//     "www.amazon.es": "estonia",
+//     "www.amazon.it": "italian",
+//     "www.amazon.de": "germani",
+//     "www.amazon.fr": "french"
+// };
 
 /**
  * Create and download excel file
@@ -1592,7 +1591,7 @@ function retrieveWindowVariables(variables) {
 /**
  * Render analysis table
  */
-function renderAnalysisTable() {
+function renderAnalysisTableHUGE() {
     // Check domain hostname
     if (!Object.keys(validDomains).includes(hostname)) {
         return;
@@ -1684,19 +1683,133 @@ function renderAnalysisTable() {
 }
 
 try {
-    renderAnalysisTable();
+    renderAnalysisTableHUGE();
 } catch (error) {
     // console.log("catch", error);
 }
 
+
+// overlay
+
+function overlay() {
+    // overlay {
+    //     position: fixed; /* Sit on top of the page content */
+    //     display: none; /* Hidden by default */
+    //     width: 100%; /* Full width (cover the whole page) */
+    //     height: 100%; /* Full height (cover the whole page) */
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    //     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    //     cursor: pointer; /* Add a pointer on hover */
+    // }
+
+    if (!Object.keys(validDomains).includes(hostname)) {
+        return;
+    }
+
+    chrome.runtime.onMessage.addListener(
+        function (msg) {
+            console.log(msg)
+        }
+    )
+
+}
+
+// var port = chrome.runtime.connect();
+//
+// window.addEventListener("message", function(event) {
+//     // We only accept messages from ourselves
+//     // if (event.source != window)
+//     //     return;
+//
+//     if (event.data.type && (event.data.type == "FROM_PAGE")) {
+//         console.log("Content script received: " + event.data.text);
+//         port.postMessage(event.data.text);
+//     }
+// }, false);
+
+
+try {
+    overlay();
+} catch (error) {
+    // console.log("catch", error);
+}
+
+
+
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-    chrome.storage.local.set({
-        [uniqueId + "_isEnable"]: msg.isEnable
-    }, function () {
-        if (chrome.runtime.lastError) {
-            console.log("Error Storing 2: ", chrome.runtime.lastError.message);
+
+    if (msg.advanceKeyword === 'true') {
+
+        let aPage = document.getElementById('nav-belt')
+        var div = document.createElement("div");
+        div.style.width = "1000px";
+        div.style.height = "1000px";
+        div.innerHTML = `<div id='overlay' class="card">
+  <div class="navbar">
+    <p>Advance keyword Research</p>
+    <button class="close-btn" id="close-btn">X</button>
+  </div>
+  
+
+  
+<table>
+  <tr>
+    <th>Keyword Niche Score</th>
+    <th>Number of Results</th>
+    <th>Average BSR</th>
+     <th>Average Reviews</th>
+     <th>Average Price</th>
+     <th>Estimated Sales</th>
+     <th>Estimated Search Volume</th>
+  </tr>
+  <tr>
+    <td>67%</td>
+    <td>23,454</td>
+    <td>64,322</td>
+    <td>64,322</td>
+    <td>64,322</td>
+    <td>64,322</td>
+    <td>64,322</td>
+  </tr>
+  
+</table>
+  
+  
+<!-- <div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+
+  <div class="grid-item">9</div>  
+</div> -->
+</div>`;
+        document.body.appendChild(div);
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById('close-btn').onclick= function(){
+            console.log('close')
+            document.getElementById("overlay").style.display = "none";
         }
 
-        location.reload();
-    });
+        console.log(msg)
+    } else {
+        // console.log('Runnig')
+        chrome.storage.local.set({
+            [uniqueId + "_isEnable"]: msg.isEnable
+        }, function () {
+            if (chrome.runtime.lastError) {
+                console.log("Error Storing 2: ", chrome.runtime.lastError.message);
+            }
+
+            location.reload();
+        });
+    }
+
 });

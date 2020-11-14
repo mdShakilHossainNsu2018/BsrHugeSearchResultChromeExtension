@@ -1,18 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="11f102c1-f53f-4b56-b95a-c83690ab5138" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/window.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/content.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/popup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/options.html" beforeDir="false" afterPath="$PROJECT_DIR$/options.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/popup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,11 +51,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../[A-Z] Huge Amazon Search Suggestion Expander" />
+    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/amazon_huge_search_results_bsr_and_keyword_research" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,12 +77,39 @@
       <option name="presentableId" value="Default" />
       <updated>1603543532167</updated>
       <workItem from="1603543541861" duration="1976000" />
-      <workItem from="1603598109882" duration="7604000" />
+      <workItem from="1603598109882" duration="10275000" />
+      <workItem from="1603789881073" duration="9251000" />
+      <workItem from="1603893741004" duration="4309000" />
+      <workItem from="1604072004897" duration="3349000" />
+      <workItem from="1604160784010" duration="2494000" />
+      <workItem from="1604219327865" duration="3781000" />
+      <workItem from="1604293461441" duration="1207000" />
+      <workItem from="1604330957017" duration="7734000" />
+      <workItem from="1604412314400" duration="7220000" />
+      <workItem from="1604491773249" duration="3786000" />
+      <workItem from="1604547715336" duration="8080000" />
+      <workItem from="1604681291796" duration="17000" />
+      <workItem from="1604846095605" duration="1918000" />
+      <workItem from="1604937812080" duration="688000" />
+      <workItem from="1605025968187" duration="778000" />
+      <workItem from="1605339045195" duration="1960000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -61,14 +117,18 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1603603923751">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1603894662870">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603603923751" />
-    <state x="413" y="241" key="Github.ShareDialog" timestamp="1603644084484">
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603894662870" />
+    <state x="413" y="241" key="Github.ShareDialog" timestamp="1603644198717">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="413" y="241" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1603644084484" />
+    <state x="413" y="241" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1603644198717" />
+    <state x="317" y="48" key="Github.UntrackedFilesDialog" timestamp="1603644212210">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="317" y="48" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603644212210" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1603644122599">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
